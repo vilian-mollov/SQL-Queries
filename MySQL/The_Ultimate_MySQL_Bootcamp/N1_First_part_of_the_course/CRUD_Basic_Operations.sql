@@ -1,3 +1,5 @@
+USE book_shop;
+
 INSERT INTO books () VALUES (); -- SKELETON
 
 INSERT INTO books (title, author_fname, author_lname, released_year, stock_quantity, pages) 
