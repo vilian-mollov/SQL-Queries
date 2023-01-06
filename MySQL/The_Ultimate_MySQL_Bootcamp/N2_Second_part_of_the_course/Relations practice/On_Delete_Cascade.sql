@@ -14,3 +14,15 @@ ALTER TABLE orders
   SELECT * FROM orders;
   SELECT * FROM customers;
   
+  
+  -- You can also specify that constrain when creating table 
+  CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    order_date DATE,
+    amount DECIMAL(8 , 2 ),
+    customer_id INT,
+    FOREIGN KEY (customer_id)
+        REFERENCES customers (id)
+        ON DELETE CASCADE
+);
+  
