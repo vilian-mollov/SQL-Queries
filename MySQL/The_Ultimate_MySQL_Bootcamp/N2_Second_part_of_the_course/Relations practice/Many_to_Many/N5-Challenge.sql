@@ -8,9 +8,9 @@ SELECT
 	first_name, 
 	last_name, 
 	COUNT(reviewer_id) AS COUNT, 
-	MIN(rating) AS MIN, 
-	MAX(rating) AS MAX, 
-	ROUND(AVG(rating),1) AS AVG,  
+	IFNULL(MIN(rating),0) AS MIN, 
+	IFNULL(MAX(rating),0) AS MAX, 
+	IFNULL(ROUND(AVG(rating),1),0) AS AVG,  
 CASE 
 WHEN COUNT(reviewer_id) > 0 THEN 'ACTIVE' 
 	ELSE 'INACTIVE' 
