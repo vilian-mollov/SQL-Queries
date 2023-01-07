@@ -10,7 +10,7 @@ SELECT title, released_year, genre, rating, first_name, last_name FROM reviewers
 JOIN reviews ON reviews.reviewer_id = reviewers.id 
 JOIN series ON reviews.series_id = series.id; 
 
--- using the virtula table the same why others
+-- using the virtula table
 SELECT * FROM full_reviews;
 
 SELECT * FROM full_reviews WHERE genre = 'Comedy';
