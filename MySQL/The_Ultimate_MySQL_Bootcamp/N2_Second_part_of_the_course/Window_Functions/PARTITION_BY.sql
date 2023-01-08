@@ -1,5 +1,6 @@
 USE exercise;
 
+-- slight increase of engineering salaries
 UPDATE employees SET salary = salary * 3 WHERE department = 'engineering';
 
 -- partition by department
