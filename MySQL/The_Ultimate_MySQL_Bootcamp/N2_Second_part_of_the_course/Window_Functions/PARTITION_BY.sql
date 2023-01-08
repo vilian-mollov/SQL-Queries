@@ -1,5 +1,7 @@
 USE exercise;
 
+UPDATE employees SET salary = salary * 3 WHERE department = 'engineering';
+
 -- partition by department
 SELECT 
 	emp_no, 
@@ -29,3 +31,16 @@ SELECT
 	salary, 
 	COUNT(*) OVER(PARTITION BY department) AS company_employees 
 FROM employees;
+
+
+SELECT 
+	emp_no, 
+	department, 
+    salary, 
+    SUM(salary) OVER(PARTITION BY department) AS dep_payroll,
+    SUM(salary) OVER() AS total_payroll
+FROM employees;
+
+
+
+
