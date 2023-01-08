@@ -18,9 +18,9 @@ SELECT
 FROM employees
 ORDER BY  department, salary DESC;
 
-INSERT INTO employees(department, salary) VALUES ('sales',51400);
-INSERT INTO employees(department, salary) VALUES ('sales',42500);
-INSERT INTO employees(department, salary) VALUES ('customer service', 42500);
+INSERT INTO employees(department, salary) VALUES ('sales',51200);
+INSERT INTO employees(department, salary) VALUES ('sales',42200);
+INSERT INTO employees(department, salary) VALUES ('customer service', 42200);
 
 -- this is count of employees by department
 SELECT 
