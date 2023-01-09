@@ -9,7 +9,7 @@ USE instagram_db;
 CREATE TABLE users (
 id INT PRIMARY KEY AUTO_INCREMENT,
 username VARCHAR(255) NOT NULL UNIQUE,
-create_at TIMESTAMP DEFAULT NOW()
+created_at TIMESTAMP DEFAULT NOW()
 );
 
 CREATE TABLE photos(
@@ -55,11 +55,11 @@ PRIMARY KEY (photo_id, tag_id)
 
 CREATE TABLE follows(
 follower_id INT NOT NULL,
-folowee_id INT NOT NULL,
+followee_id INT NOT NULL,
 created_at TIMESTAMP DEFAULT NOW(),
 FOREIGN KEY (follower_id) REFERENCES users(id),
-FOREIGN KEY (folowee_id) REFERENCES users(id),
-PRIMARY KEY (follower_id, folowee_id)
+FOREIGN KEY (followee_id) REFERENCES users(id),
+PRIMARY KEY (follower_id, followee_id)
 );
 
 
