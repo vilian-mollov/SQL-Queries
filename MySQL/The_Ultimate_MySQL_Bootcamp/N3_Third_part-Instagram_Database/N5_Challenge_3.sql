@@ -5,7 +5,7 @@ USE instagram_db;
 -- We want to target out inactive users with an email campaign.
 
 
-SELECT * FROM users
+SELECT users.id, username, image_url FROM users
 LEFT JOIN photos ON photos.user_id = users.id
-WHERE user_id IS NULL;
+WHERE photos.id IS NULL;
 
